@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>My family</title>
+<style>
+* {
+  font-size: 40px;
+}
+/* -----------------------------------------position: relative;  position: absolute;*/
+.papa {
+  
+  height: 500px;
+  border: 3px solid #000;
+  position: relative;
+  margin-bottom: 20px;
+  }
+
+  .sun {
+    
+    border: 3px solid rgb(250, 0, 0);
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+}
+
+.item__two {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(250, 0, 0);
+    border-radius: 100%;    
+}
+.sun__aside {  
+    
+    border: 5px solid rgb(37, 0, 250);
+    background-color: #fff;    
+    position: fixed;
+    left: 10px;
+    top: 200px;
+  }
+  .papa__section {
+    
+    
+    border: 5px solid blue;
+  }
+
+  .papa__article {
+    border: 5px solid rgb(3, 98, 0);
+    margin-top: 40px;
+    width: 500px;
+
+    }
+
+  .sun__div3 {
+    width: 50%;
+
+  }
+  .sticky h2 {
+    color: red;
+    border: 5px solid rgb(3, 98, 0);
+    border: 5px solid red;
+    padding: 30px;
+    
+  }
+  .sticky {
+    position: sticky;
+    float: right;
+    top:0;
+  }
+@media (min-width: 290px) {
+  .papa {
+  
+  width: 280px;
+  border: 3px solid #fffff;
+  position: relative;
+  margin-bottom: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<h2>Мир настоящего шоколада</h2>
+<br>
+
+<main>
+  <!-- ------------------------------- position: relative   position: absolute-->
+<div class="papa">папа - position: relative
+	<div>
+    <p class="sun">сын - position: absolute</p>
+	</div>
+</div>
+</main>
+<!-- --------------------------- position: fixed;  ---------------- text -->
+<section class="papa__section"> 
+	<aside class="sun__aside">position: fixed; <br> left: 10px;<br>
+    top: 200px;</aside>
+    <div>
+      <p>position__fix</p>
+      <p>  тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+      kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+      </p>
+      
+      <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+      </p> 
+
+      <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+      </p>
+
+      <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+    </div>
+    <div>
+      <p> тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+      kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+      </p>
+      
+      <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+      </p> 
+
+      <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+      </p>
+
+      <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+    </div>
+
+    <div>
+      <p> тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+      kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+      </p>
+      
+      <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+        kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+      </p> 
+
+      <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+      </p>
+
+      <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+      <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+    </div>    
+</section>
+<!-- ----------------------------------sticky -->
+<article>
+  <div>
+    <div class="sticky"> <h2>position: sticky + <br> float: right <br> top:0; </h2></div>
+<div class="papa__article">папа
+  
+  <div class="sun__div3">position: sticky    
+  </div>
+  
+  <div>
+    <p> тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+    kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+    </p>
+    
+    <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+    </p> 
+
+    <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+    </p>
+
+    <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+  </div>
+
+
+  
+  
+  
+  <div>
+    <p> тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+    kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+    </p>
+    
+    <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+    </p> 
+
+    <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+    </p>
+
+    <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+  </div>
+</div>
+</div>
+<div class="footer">
+  <div>
+    <p> тут текст, тут текст, тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  тут текст,  kkkkkkkkkkkkkkkk
+    kkkkkldkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkk
+    </p>
+    
+    <p> kkkkkkkkklaskdkkkkkkk kkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkklask dkkkkkkkkkkkkkkkkkk
+      kkkkkkkkkkkkkkkkkkkkkkk kkkklaskdkkkkkkkkkk
+    </p> 
+
+    <p> kkkkkkkkkkkkkkkkkkkkk     dkk
+    </p>
+
+    <p>kkkkkkkkkkkkkkkkkkkkk    dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk       dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk     dkk</p>
+    <p>kkkkkkkkkkkkkkkkkkkkk dkk</p>
+  </div>
+</div>
+</article>
+</body>
+</html>

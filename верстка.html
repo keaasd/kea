@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Skillbox — онлайн-университет</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<meta name="keywords" content="важные, ключевые, слова">
+	<meta name="description" content="краткое описание, которое отображается в поисковиках под строчкой заголовка">
+	
+	<style>
+	* {
+ position:relative;
+ padding:25px 25px 20px;
+ margin:0; 
+ border-radius:4px
+}
+
+html::before {
+	content:"html";
+}
+body {
+	min-width:430px;
+	border:2px dashed #c7e4ff;
+	}
+body::before {
+ content:"body";
+}	
+
+header {
+ background-color:#f3faff;
+ border:2px solid #7fc1ff;
+ margin-bottom: 20px;
+ }
+header::before {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: .04em;
+}
+header::before {
+ content:"header"
+}
+
+main {
+ background-color:#f3faff;
+ border:2px solid #7fc1ff;
+}
+main::before {
+	position: absolute;
+	top: 0px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: .04em;
+}
+main::before {
+ content:"main";
+ 
+}
+
+article,aside,nav,section {
+
+ background-color:#f9f7ff;
+ border:2px solid #9779ec;
+ margin-bottom: 20px;
+}
+article::before, aside::before, nav::before, section::before {
+ position: absolute;
+ color:#9779ec;
+ top: 8px;
+ top: 0px;
+ left: 10px;
+ font-size: 13px;
+ line-height: 5px;
+ 
+ 
+}
+h1, p {
+ background-color:#fff
+}
+
+h1 {	
+	font-size:18px;
+	border: 2px solid #ff994f;
+	position: relative;
+	padding: 25px 25px 20px;
+	margin: 0;
+	border-radius: 4px;
+}
+h1::before {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 10px;
+	letter-spacing: .04em; 
+   }
+h1::before {
+ content:"h1"; /* Добавляем желаемый символ */ 
+ color: #ff994f;
+   }
+ 
+p {
+ border:2px solid #f36dff
+ 
+}
+p::before {
+ color:#f36dff;
+ content:"p"; /* Добавляем желаемый символ  */ 
+   }
+p::before {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: .04em;
+}
+
+footer {
+	background-color: #f3faff;
+    border: 2px solid #7fc1ff;
+	position: relative;
+	padding: 25px 25px 20px;
+	margin: 20px 0;
+	border-radius: 4px;
+ 
+}
+footer::before {
+	position: absolute;
+	top: 0px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: .04em;
+}
+
+
+footer::before {
+ content:"footer"
+}
+section::before {
+ content:"section"
+}
+article::before {
+ content:"article"
+}
+aside::before {
+ content:"aside"
+}
+nav::before {
+ content:"nav"
+}
+
+	div {
+		border: solid 2px green;
+		margin-bottom: 20px;
+	}
+	
+	
+	li:before {
+     content: "¶ "; /* Добавляем желаемый символ перед элементом списка */ 
+   }
+   
+   li {
+     list-style: none; /* Убираем исходные маркеры */ 
+	 
+   }
+	</style>
+	
+</head>
+<body>
+  <header>
+  <h1>Сайт начинающего верстальщика</h1>
+  </header>
+  <main>
+	<nav>
+	Навигация
+	</nav>
+	<section> 
+		<p>Всем привет! Добро пожаловать на мой первый сайт. Ещё недавно я понятия не имел, кто такой верстальщик, а теперь я нашёл тренажёры по HTML и CSS и поставил перед собой цель — стать им. У меня даже появился инструктор — Кекс, который не позволит мне расслабиться и будет следить за моими успехами.</p>
+
+        <p>Моё первое задание — вести дневник и честно писать обо всех своих свершениях.</p>
+	</section>
+	<section>Раздел про навыки </section>
+	<aside>Здесь могла быть ваша реклама</aside>
+	<article>
+		<ul>
+			<li><ins datetime="2009-10-11T01:25-07:00">ins datetime=""</ins></li>
+			<li><del datetime="2009-10-11T01:25-07:00">Погулять</del></li>
+			<li>покормить</li>
+		</ul>
+	</article>
+  </main>
+  <footer>Подвал сайта</footer>
+  
+  
+   
+
+</body>
+</html>

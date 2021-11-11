@@ -1,0 +1,124 @@
+form action - загружает на сервер
+method="post" (шифрованный)
+enctype - шифрование
+<input form="my-form"
+<form id="my-form"
+
+<select>
+    <option value="first">Первый</option>
+selected=
+</select> - открывающийся список
+
+<fieldset>                
+                <fieldset>
+                    <legend>Собери набор развлечений</legend>
+                    <label>
+                        <input type="radio" name="PlayStation-5">PlayStation 5
+                    </label>
+
+<label for="login">Имя</label> 
+<input name="login">
+
+type=
+    "text", 
+    password
+    button 
+    submit 
+    reset - сброс
+    file  - загрузить файл (если сервер поддерживает)
+    hidden  - Скрытое поле
+    "checkbox" (галочки) checked= (выбран по умолчанию
+    radio  
+    date 
+     <input type="time"   Время*
+    search поиск
+    email 
+    tel 
+    url - обязательно просит http:/
+    range - ползунок
+    number - счетчик
+
+<input>
+если (range или number) :
+maxlength="8" - максималько количество символов, больше ввести нельзя
+minlength="7" - минимум символов
+step="5" - шаг
+max="50" - максимум символов 
+min="50" - минимум символов
+
+
+если type=file То:
+accept="image/*" - загрузить только картинки
+accept="image/svg+xml (jpeg)"
+accept="image/jpeg,image/png"
+
+multiple - выберите несколько файлов, не один.
+
+size="2" - количество в выпадающем списке
+type="text" 
+name="login" 
+id="" 
+
+required - только для чтения
+readonly - только для чтения
+
+
+
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+<form action="" placeholder="введите что нибудь"></form>
+
+    <form action="https://jsonplaceholder.typicode.com/posts"
+        method="post"
+        enctype="application/x-www-form-urlencoded">
+       
+    <input type="text" name="login" id="" required>  <!-- обязательное поле -->
+    <input type="password" name="password" required>
+        <input type="button" value="кнопка" required>
+    <input type="submit">
+    
+    <input type="reset">
+    <input type="file" name="file">
+
+    <input type="hidden" name="hidden" value="Скрытое поле">
+    
+    
+    <input type="checkbox" name="dinner" value="first">первое
+    <input type="checkbox" name="dinner" value="second">второе
+    <input type="checkbox" name="dinner" value="compote">и компот
+
+    <input type="radio" name="breakfast" value="eggs">яичница
+    <input type="radio" name="breakfast" value="donut">пончики
+    <input type="radio" name="breakfast" value="porridge">каша
+
+    <input type="search" name="" id="">
+    
+    
+
+
+    <input type="date" name="" id="" disabled> <!-- только для чтения -->
+    <input type="email" name="email" id="" readonly>
+    <input type="tel" name="tel" id="">
+    <input type="url" name="url" id="">
+    
+    <input type="range" name="" id="">
+    <input type="number" name="" id="">
+    <textarea name="" id="" cols="30" rows="10">
+
+    </textarea>
+
+    <button type="button">кнопка </button>
+    <button type="submit">отправить данные</button>
+    <button type="reset">очистить поля</button>
+
+    <select name="select" id="">
+        <option value="first">Первый</option>
+        <option value="second">Второй</option>
+        <option value="third">Третий</option>
+        <option value="fourth">Четвертый</option>
+        <option value="fifth">пятый</option>
+
+    </select>
+
+    </form>
