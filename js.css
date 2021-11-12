@@ -123,3 +123,22 @@ for (let i = 0; i < names.length; i++) {
  купить батон
 пришел Борис
  нет яиц, купить батон.
+
+----------------------- while, do while-----------------------
+
+let eggs = 0;
+
+do {
+    console.log(`пришел покупатель`);
+    if (eggs >= 10) {
+        eggs -= 10;
+        console.log ('купить 10 яиц');
+        console.log ('купить батон');
+    } else if (eggs) {
+        console.log (`купить ${eggs} яиц`);
+        console.log ('купить батон');
+        eggs -= eggs
+    } else {
+        console.log('нет яиц, купить батон')
+    }
+} while (aggs)
