@@ -142,3 +142,12 @@ do {
         console.log('нет яиц, купить батон')
     }
 } while (aggs)
+-------------------------------
+
+const goSpar = x => x ** 2; // возведение в степень
+
+const goDiksi = (a, b, c) => {
+    const res = a + b + c;
+    return res / 2
+}; 
+console.log('goDiksi(1, 5, 10): ', goDiksi(1, 5, 10));
