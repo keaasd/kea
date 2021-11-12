@@ -4,6 +4,8 @@ alert ('hello friends!')
 
 console.log()
 console.log (5+5);
+let count_1 = 'dog';
+let count_2 = `dog`; // обратные кавычки
 
 let count = 5;
 const floatNumber = 10.5; // дробные
@@ -19,8 +21,12 @@ const arr = [];
 const func = function() {}
 
 const date = new Date();
-const regExp = new RegExp('\D'); // регулярные выражения
 const err = new Error();
+const regExp = new RegExp('\D'); // регулярные выражения
+  const regExp2 = /\D/;
+  let count = 5;
+  console.log (count + 5); // 10
+
 
 let number = 5;
 
