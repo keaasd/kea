@@ -34,3 +34,9 @@ let number = 5;
 _number
 $number
 navigationListItemRed = ''; новое слово с большой буквы
+
+const item = '<article class="item"> привет мир</article>'
+const item = `
+    <article class="item"> 
+        привет мир
+    </article>';
