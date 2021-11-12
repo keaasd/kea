@@ -3,3 +3,28 @@ alert ('hello friends!')
   prompt ('hello friends!') - сохранит в переменную
 
 console.log()
+console.log (5+5);
+
+let count = 5;
+const floatNumber = 10.5; // дробные
+const animal = "cat";
+const Boolean = true;
+const bigInt = 123456n;
+const sym = Symbol();
+let typeUndefined;
+const typeNull null;
+
+const object = {};
+const arr = [];
+const func = function() {}
+
+const date = new Date();
+const regExp = new RegExp('\D'); // регулярные выражения
+const err = new Error();
+
+let number = 5;
+
+не может начинаться с числа
+_number
+$number
+navigationListItemRed = ''; новое слово с большой буквы
