@@ -17,6 +17,7 @@ console.log (5 === '5'); //false
 console.log (5 != 5);
 console.log (5 !== 5);
 console.log (!true);
+console.log (!(5 > 10)); // покажет наоборот true
 console.log (+'10'+ +'15'); // унарный - приводит строку к числу
 let count_1 = 'dog';
 let count_2 = `dog`; // обратные кавычки
