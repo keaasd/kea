@@ -1,3 +1,8 @@
+ <script defer src="js/index.js"></script>
+
+const presentOrderBtn = document.querySelector(
+'.present__order-btn');
+console.dir(); // показать как "объект"
 alert ('hello friends!')
   confirm ('hello friends!') - да или отмена
   prompt ('hello friends!') - сохранит в переменную
