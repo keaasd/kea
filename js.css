@@ -27,6 +27,16 @@ const regExp = new RegExp('\D'); // регулярные выражения
   let count = 5;
   console.log (count + 5); // 10
 
+let animals = {
+        cat: '',
+        dog: '',
+        mouse: '',
+        'wild animals': false,
+        names: [1, 2, 'neo', 'trinity'],
+        say: function () {
+
+        }
+    };
 
 let number = 5;
 
