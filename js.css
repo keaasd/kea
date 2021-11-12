@@ -2,12 +2,17 @@
 
 const presentOrderBtn = document.querySelector(
 '.present__order-btn');
-console.dir(); // показать как "объект"
+
+presentOrderBtn.remove - удалить класс
+
+
+
 alert ('hello friends!')
   confirm ('hello friends!') - да или отмена
   prompt ('hello friends!') - сохранит в переменную
 
 console.log()
+console.dir(); // показать как "объект"
 console.log (5+5);
 console.log (5 < 5);
 console.log (5 > 5);
