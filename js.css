@@ -11,7 +11,13 @@ presentOrderBtn.innerHTML = '<h1>кликни</h1>'
 pageOverlayModal.classList.add('page__overlay_modal_open'); // добавить класс
 pageOverlayModal.classList.remove('page__overlay_modal_open'); // удалить класс
 ------------------
+const handlerModal = (openBtn, modal, openSelector, closeTrigger) => {
 
+    openBtn.addEventListener('click', () => {
+        modal.classList.remove(openSelector)
+    })
+ 
+ ----------------------------------
 alert ('hello friends!')
   confirm ('hello friends!') - да или отмена
   prompt ('hello friends!') - сохранит в переменную
