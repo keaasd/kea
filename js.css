@@ -1,1 +1,3 @@
-alert
+alert ('hello friends!')
+  confirm ('hello friends!') - да или отмена
+  prompt ('hello friends!') - сохранит в переменную
