@@ -91,3 +91,19 @@ if (eggs >=10) {
 const result = eggs < 20 ? 'закупить яиц': 'яиц достаточно';
 console.log ('result: ', result);
 
+ -------------------------- циклы ----------------------
+let eggs = 38;
+for (let i = 0; i < 5; i++) {
+    console.log('-------------- пришел покупатель')
+    if (eggs >= 10) {
+        eggs -= 10;
+        console.log ('купить 10 яиц');
+        console.log ('купить батон');
+    } else if (eggs) {
+        console.log ('купить ${eggs} яиц');
+        console.log ('купить батон');
+        eggs -= eggs
+    } else {
+        console.log('нет яиц, купить батон')
+    }
+}
