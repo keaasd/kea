@@ -5,6 +5,8 @@ const presentOrderBtn = document.querySelector(
 
 presentOrderBtn.remove - удалить класс
 --------------------------------------------
+const pageOverlay = document.createElement('div'); // создать элемент, которого нет в html
+
 presentOrderBtn.textContent = 'кликни'
 presentOrderBtn.innerHTML = '<h1>кликни</h1>'
 ------------
