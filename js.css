@@ -1,5 +1,13 @@
  <script defer src="js/index.js"></script>
+0/0 // NaN
+"строка" * 4 // NaN
+infinity / infinity
 
+добавить в html тег:
+ document.body.innerHTML = "<h1 class / / > Привет мир! </h1>"; // "экранирование"= "/ kkk /"
+ document.body.innerHTML = '<h1 class="js"> Привет "айтишники" </h1>'; // "экранирование"= "/ kkk /"
+ 
+console.log(typeof infinity)
 const presentOrderBtn = document.querySelector(
 '.present__order-btn');
 
