@@ -19,7 +19,13 @@ const foo = () => {};
 =====
 const err = new Error();
 
+====
+регулярные выражения, относится к классу
+const regExp = /A-Z/i
+const regExp = RegExp()
 
+
+=====
 добавить в html тег:
  document.body.innerHTML = "<h1 class / / > Привет мир! </h1>"; // "экранирование"= "/ kkk /"
 document.body.innerHTML = `<h1 class="js"> Привет "айтишники" + ${myName} </h1>`; 
