@@ -2,7 +2,18 @@
 0/0 // NaN
 "строка" * 4 // NaN
 infinity / infinity
+=======
+равенство равно
+2 === 2 // true
 
+
+добавить в html тег:
+ document.body.innerHTML = "<h1 class / / > Привет мир! </h1>"; // "экранирование"= "/ kkk /"
+document.body.innerHTML = `<h1 class="js"> Привет "айтишники" + ${myName} </h1>`; 
+ ==================
+вычислить год рождения
+ let birthYear = 1987
+ let nowYear = new Date().getFullYear();
 
 
 добавить в html тег:
