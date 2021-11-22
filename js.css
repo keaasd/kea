@@ -7,10 +7,17 @@ infinity / infinity
 2 === 2 // true
 ===
 объект :
- const = obj { }
+ const = obj {
+  a: 1,
+  b: 2,}
 ====
 массив :
  const arr = [1, 2]
+===
+функция 
+const foo = () => {};
+=====
+const err = new Error();
 
 
 добавить в html тег:
