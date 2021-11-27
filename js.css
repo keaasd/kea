@@ -62,7 +62,7 @@ const handlerModal = (openBtn, modal, openSelector, closeTrigger) => {
 если условие if else  switch - если 3 и более условий, то это используй
 let clientStatus = 'Приятель';
 let price = 1000;
-let discount;
+let discount = 0;
 switch (clientStatus) {
     case "Приятель":
         discount = price * 0.05;
