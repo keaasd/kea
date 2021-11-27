@@ -80,6 +80,21 @@ switch (clientStatus) {
 
 const totalPrice = price - discount;
 console.log('totalPrice: ', totalPrice);
+ 
+ ======
+операторы сравнения if else
+let money = 301;
+if (money > 300) {
+    console.log('денеги есть');    
+}
+
+if (money <= 300 && money > 0) {
+    console.log('денег мало');
+}
+
+if (money <= 300 && money > 0) {
+    console.log('денег нет');
+}
  ----------------------------------
 alert ('hello friends!')
   confirm ('hello friends!') - да или отмена
