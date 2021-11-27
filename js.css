@@ -58,7 +58,28 @@ const handlerModal = (openBtn, modal, openSelector, closeTrigger) => {
     openBtn.addEventListener('click', () => {
         modal.classList.remove(openSelector)
     })
- 
+ ======
+если условие if else  switch - если 3 и более условий, то это используй
+let clientStatus = 'Приятель';
+let price = 1000;
+let discount;
+switch (clientStatus) {
+    case "Приятель":
+        discount = price * 0.05;
+        break; // останавливает
+    case "Друг":
+        discount = price * 0.08;
+        break;
+    case "Лучший друг":
+        discount = price * 0.01;
+        break;
+    default:
+        discount = 0;    
+        break;
+}
+
+const totalPrice = price - discount;
+console.log('totalPrice: ', totalPrice);
  ----------------------------------
 alert ('hello friends!')
   confirm ('hello friends!') - да или отмена
