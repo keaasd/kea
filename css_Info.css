@@ -1,4 +1,14 @@
 свойство - значение
+шрифты
+100 - Thin (Hairline)
+200 - Extra Light (Ultra Light)
+300 - Light
+400 - Normal
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)
 
 display: flex;
 flex-direction: row-reverse; row 	Значение по умолчанию, слева направо (в rtl справа налево). Flex-элементы выкладываются в строку. Начало (main-start) и конец (main-end) направления главной оси соответствуют началу (inline-start) и концу (inline-end) оси строки (inline-axis).
