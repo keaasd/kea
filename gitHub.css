@@ -6,3 +6,7 @@
 чтобы перенести изменения с работы на домашнюю машину.
 Точно так же, когда вы закончите дома, сделайте git push ,
 а затем, когда вернетесь на работу, сделайте git pull .
+
+git remote add origin git@github.com:keaasd/fd.git
+git branch -M main
+git push -u origin main
