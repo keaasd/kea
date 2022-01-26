@@ -1,0 +1,53 @@
+===поставить в header
+id="headerTop" 
+===== html
+<a href="#headerTop" class="button-up hidden" id="btnUp"></a>
+
+====== css 
+.button-up {
+    position: fixed;
+    background-image: url(../img/icons/Arrow.svg);
+    width: 52px;
+    height: 55px;
+    cursor: pointer;    
+    border: none;
+    text-decoration: none;
+    bottom: 20px;
+    right: 20px;
+    transition: 0.2s;
+}
+.button-up.hidden {
+    opacity: 0;
+}
+.button-up.visible {
+    opacity: 1;
+}
+
+===== js
+
+// Button Up
+
+window.onscroll = function(){scrollFunction()};
+
+const upbuttons = document.querySelectorAll(".button-up");
+
+for (const upbutton of upbuttons) {
+    upbutton.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+});
+}
+
+function scrollFunction(){
+    if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+        document.getElementById('btnUp').className = 'button-up visible';
+    } else {
+        document.getElementById('btnUp').className = 'button-up hidden';
+    }
+}
