@@ -1,11 +1,25 @@
 npm init -y
+	в package.json:
+удалить 
+==
+  "version": "1.0.0",
+  "main": "index.js",
+==
+"test": "echo \"Error: no test specified\" && exit 1"
+==
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+==
 обязательно сохранить файл.
 2
 npm install --save-dev webpack webpack-cli 
 (проверить https://jsonformatter.curiousconcept.com/ )
 3
 создать файл webpack.config.js
-на сайте копируем код из "Bundle It" https://webpack.js.org/ 
+код ниже (на сайте копируем код из "Bundle It" https://webpack.js.org/) 
 вставляем в "webpack.config.js":
 
 const path = require('path');
@@ -24,14 +38,17 @@ module.exports = {
    "build": "webpack"
 6
 npm run build
-ждем папку dist
+ждем папку dist и bundle.js
 7
+установим плагин для html:
 npm i html-webpack-plugin
+	появится в файле.json надпись 
+	"html-webpack-plugin": "^5.5.0"
 8
 в webpack.config.js пишем
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
 
-   и ниже  в output: { },
+   и ниже  в output: { после запятой },
 plugins: [
 	new HtmlWebpackPlugin({
 		template: './src/index.html'
@@ -40,12 +57,11 @@ plugins: [
 9
 создать src/index.html
 удалить папку dist
-
-
-10
 npm run build
 
-в конфиг.js (под new HtmlWebpackPlugin ,)
+10
+добавим подключение картинок =
+в конфиг.js (под new HtmlWebpackPlugin , после ],)
 module: {
 	rules: [
 		{
@@ -57,22 +73,28 @@ module: {
 			loader: "html-loader"
 		}
 	]
+}
+====== до };
 
-и еще добавим выше в module.exports = { (под filename: "bundle.js" до },)
+и еще добавим выше в output: - module.exports = { под filename: "bundle.js" до 
+
+},
 	assetModuleFilename: 'images/[hash][ext][query]',
 	clean: true, (это для очистки папки)
 
 11
-подключаем к картинкам еще это в терминале
+подключаем loader к картинкам в терминале
 	npm install --save-dev html-loader
 
 создать папку src/images и туда любую картинку для проверки
 
-в index.html пишем теги h1 и <img src="./images/logo.svg"
+в index.html пишем теги h1 и <img src="./images/logo.svg">
 12
-проверяем 
+удаляем папку dist и проверяем 
 npm run build
-13
+нажать на Go Live чтобы посмотреть в браузере
+13 
+
 npm install -D sass-loader sass css-loader style-loader
 туда же в rules }: 
 		,
@@ -88,6 +110,7 @@ npm install -D sass-loader sass css-loader style-loader
 			'style-loader', 'css-loader', 'sass-loader'
 			]
 		}
+==========  ] эта скобка останется
 14
 добавим файл src/styles/main.scss
 внутри него:
@@ -101,7 +124,7 @@ npm install mini-css-extract-plugin --save-dev
 в конфиге еще одну константу добавим
 const MiniCssExtractPlugin = require ('mini-css-extract-plugin');
 
-в plugins: [... })
+в plugins: new [... })
 
 добавим еще одну
 	,
@@ -109,13 +132,12 @@ const MiniCssExtractPlugin = require ('mini-css-extract-plugin');
 		filename: './styles/main.css'
 	})
 
-и в :
-test заменить строчку 'style-loader' на этот плагин
-
-'style-loader'====== miniCssExtractPlugin.loader
+и в test заменить строчку 'style-loader' 
+на этот плагин
+'style-loader'====== MiniCssExtractPlugin.loader
 
 16
-index.js:
+в index.js: пишем
 import './styles/main.scss'
 17
 npm run build
