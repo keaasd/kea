@@ -1,0 +1,121 @@
+npm init -y
+обязательно сохранить файл.
+2
+npm install --save-dev webpack webpack-cli 
+(проверить https://jsonformatter.curiousconcept.com/ )
+3
+создать файл webpack.config.js
+на сайте копируем код из "Bundle It" https://webpack.js.org/ 
+вставляем в "webpack.config.js":
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+};
+4.
+создать src/index.js
+5
+впишем package.json "scripts: {
+   "build": "webpack"
+6
+npm run build
+ждем папку dist
+7
+npm i html-webpack-plugin
+8
+в webpack.config.js пишем
+const HtmlWebpackPlugin = require ('html-webpack-plugin');
+
+   и ниже  в output: { },
+plugins: [
+	new HtmlWebpackPlugin({
+		template: './src/index.html'
+	})
+	]
+9
+создать src/index.html
+удалить папку dist
+
+
+10
+npm run build
+
+в конфиг.js (под new HtmlWebpackPlugin ,)
+module: {
+	rules: [
+		{
+			test: /\.(?:ico|png|jpg|jpeg|svg|)$/i,
+			type: 'asset/resource'
+		},
+		{
+			test: /\.html$/i,
+			loader: "html-loader"
+		}
+	]
+
+и еще добавим выше в module.exports = { (под filename: "bundle.js" до },)
+	assetModuleFilename: 'images/[hash][ext][query]',
+	clean: true, (это для очистки папки)
+
+11
+подключаем к картинкам еще это в терминале
+	npm install --save-dev html-loader
+
+создать папку src/images и туда любую картинку для проверки
+
+в index.html пишем теги h1 и <img src="./images/logo.svg"
+12
+проверяем 
+npm run build
+13
+npm install -D sass-loader sass css-loader style-loader
+туда же в rules }: 
+		,
+		{
+			test: /\.css$/i,
+			use: [
+			'style-loader', 'css-loader'
+			]
+		},
+		{
+			test: /\.scss$/i,
+			use: [
+			'style-loader', 'css-loader', 'sass-loader'
+			]
+		}
+14
+добавим файл src/styles/main.scss
+внутри него:
+$bg: #ff0;
+body {
+	background-color: $bg;
+} 
+15
+npm install mini-css-extract-plugin --save-dev
+
+в конфиге еще одну константу добавим
+const MiniCssExtractPlugin = require ('mini-css-extract-plugin');
+
+в plugins: [... })
+
+добавим еще одну
+	,
+	new MiniCssExtractPlugin({
+		filename: './styles/main.css'
+	})
+
+и в :
+test заменить строчку 'style-loader' на этот плагин
+
+'style-loader'====== miniCssExtractPlugin.loader
+
+16
+index.js:
+import './styles/main.scss'
+17
+npm run build
