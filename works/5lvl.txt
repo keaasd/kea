@@ -1,0 +1,76 @@
+prodaction - для людей
+developmen
+
+в scripts: {
+	"build": "webpack --config ./webpack-prod.config.js,
+	"dev-build": "webpack --config ./webpack-dev.config.js
+
+1 в конфиг.файле редактируем строчку
+module.exports = {  
+module.exports = ({develop}) => ({
+и в самомо конце добавим скобку до точки с запятой
+было так:    };
+будет так:   });
+2
+в package.json
+ "scripts": {
+    "build": "webpack",
+пишем ниже
+	"dev": "webpack serve --env develop"
+====(serve добавим в 3 пункте)
+3 в конфиг.файле
+const devServer = (isDev) => !isDev ? {} : {
+	devServer: {
+		open: true,
+		hot: true,
+		port: 8080,
+	}
+};
+
+в конфиг.файле module.exports = ({develop}) => ({ пишем тут с новой строки
+mode: develop ? 'development' : 'production',
+
+ниже
+перед последней }); активируем
+ ,
+...devServer(develop),
+
+4 подключаем пакет
+npm install -D webpack-dev-server
+====проверяет работает ли
+npm run dev
+
+там проблема с загрузкой картинок. надо каждый раз изменять-сохранять html чтобы появилась картинка.
+
+5.
+6 sasc
+scss
+ в html 
+<div class="box">
+        <h1 class="box_title">привет</h1>
+        <img class="box_image" src="./images/logo.svg" alt="">
+    </div>
+в main.scss 
+$bg: #ff0;
+body {
+	background-color: $bg;
+} 
+.box {
+	background-color: $bg;
+	&_title {
+		color: #f00;
+	}
+	&_image {
+		max-width: 200px;
+	}
+}
+==== & заменяет слово box
+
+7
+==== обязательно в имени нужна первое нижние подчеркивание.
+ _reset.scss (== типо нормалайза.css)
+html, body, ul, ol {margin: 0; Padding: 0;}
+====
+base.scss
+@import 'reset';
+body {}
