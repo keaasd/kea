@@ -1,0 +1,77 @@
+====обратиться к ТЕГу
+const head = document.getElementsByTagName('h1');
+console.log(head[0]); // находит первый h1
+====обратиться к CLASSу
+const head2 = document.getElementsByClassName('head');
+====обратиться к id
+=лучше обращаться к id, потому что он один на страничке.
+const head3 = document.getElementsById('head');
+console.log(head3); // указываем переменную
+
+==== QUERY получим Первый по списку элемент.
+const head3 = document.querySelector('#main-head'); // id, но лучше getElements
+const head4 = document.querySelector('.head'); // class
+const head5 = document.querySelector('h1'); // селектор
+
+==== обращаемся к АТРИБУТу
+const head5 = document.querySelector('[title="javascript"]'); // атрибут
+
+==== QUERY All . получим ВСЕ элементы.
+const head3 = document.querySelectorAll('#main-head'); // в массиве получим
+
+==== .className
+const green = document.querySelectorAll('#main-head');
+console.log(green.className); // Найдет класс
+
+==== присваивать значения и классы
+const type = document.querySelectorAll('#type');
+type.className = 'red'; // добавит класс "red".
+=
+const green = document.querySelector('.green'); // ищем по class
+green.className = 'blue'; // добавит  class='blue', и удалит класс green
+
+=== добавить класс classList
+const green = document.querySelector('.green'); // ищем по class
+green.classList.add('blue'); // переменная.classList.добавитьКласс('название класса');
+=== УДАЛИТЬ класс classList
+const green = document.querySelector('.green'); // ищем по class
+green.classList.remove('blue'); // удалили класс
+
+=== добавить-УДАЛИТЬ  class
+const green = document.querySelector('.green'); // ищем по class
+green.classList.toggle('blue'); // удалили класс если есть, или добавили, если нет.
+
+=== .contains покажет true false
+console.log(green.classList.contains('green')); // если есть такой класс то  true.
+
+==== СТИЛИ добавим через атрибут
+const title = document.querySelector('[title="javascript"]'); // атрибут
+title.style.textDecoration = "line-through";
+  ==переменная.style.свойствоБезДефиса = "значение-нужное"
+
+====
+const list = document.querySelector('ul'); // тег ul
+const li = list.querySelector('.green') // ищем в ul с классом .green
+console.log(li); // покажет все ul>li с классом green
+
+ ==== слушатель события .addEventListener()
+const list = document.querySelector('ul'); // тег ul
+const li = list.querySelector('li'); // 
+
+for (let i = 0; i < li.length; i++) { // сравниваем i с количеством li
+console.log(li[i]); // все li отдельно покажет, не в массиве.
+ ==addEventListener(на какое собитие, функция (стрелочн), и еще одно)
+ li[i].addEventListener('click', () => { 
+ li[i].classList.toggle('through'); }); } // на каждый li ставим слушатель событий
+
+1. ищет li
+2. считает количество их.
+3. вешает слушателя.
+4. добавляет-убирает класс. 
+в итоге клик по списку делает зачеркнутым текст или наоборот.
+
+
+
+
+
+
