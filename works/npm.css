@@ -144,3 +144,8 @@ npm run build
 npm run build
 19
 npm run dev
+20
+удалить папку node
+запушить в репозиторий
+и восстановить папку командой:
+npm i
