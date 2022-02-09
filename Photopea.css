@@ -1,0 +1,66 @@
+array(32) {
+  ["login"]=>
+  string(6) "keaasd"
+  ["id"]=>
+  int(89311461)
+  ["node_id"]=>
+  string(20) "MDQ6VXNlcjg5MzExNDYx"
+  ["avatar_url"]=>
+  string(52) "https://avatars.githubusercontent.com/u/89311461?v=4"
+  ["gravatar_id"]=>
+  string(0) ""
+  ["url"]=>
+  string(35) "https://api.github.com/users/keaasd"
+  ["html_url"]=>
+  string(25) "https://github.com/keaasd"
+  ["followers_url"]=>
+  string(45) "https://api.github.com/users/keaasd/followers"
+  ["following_url"]=>
+  string(58) "https://api.github.com/users/keaasd/following{/other_user}"
+  ["gists_url"]=>
+  string(51) "https://api.github.com/users/keaasd/gists{/gist_id}"
+  ["starred_url"]=>
+  string(58) "https://api.github.com/users/keaasd/starred{/owner}{/repo}"
+  ["subscriptions_url"]=>
+  string(49) "https://api.github.com/users/keaasd/subscriptions"
+  ["organizations_url"]=>
+  string(40) "https://api.github.com/users/keaasd/orgs"
+  ["repos_url"]=>
+  string(41) "https://api.github.com/users/keaasd/repos"
+  ["events_url"]=>
+  string(52) "https://api.github.com/users/keaasd/events{/privacy}"
+  ["received_events_url"]=>
+  string(51) "https://api.github.com/users/keaasd/received_events"
+  ["type"]=>
+  string(4) "User"
+  ["site_admin"]=>
+  bool(false)
+  ["name"]=>
+  NULL
+  ["company"]=>
+  NULL
+  ["blog"]=>
+  string(0) ""
+  ["location"]=>
+  NULL
+  ["email"]=>
+  NULL
+  ["hireable"]=>
+  NULL
+  ["bio"]=>
+  NULL
+  ["twitter_username"]=>
+  NULL
+  ["public_repos"]=>
+  int(19)
+  ["public_gists"]=>
+  int(0)
+  ["followers"]=>
+  int(0)
+  ["following"]=>
+  int(0)
+  ["created_at"]=>
+  string(20) "2021-08-21T15:48:23Z"
+  ["updated_at"]=>
+  string(20) "2022-02-04T16:28:32Z"
+}
