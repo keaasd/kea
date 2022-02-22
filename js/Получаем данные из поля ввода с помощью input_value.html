@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Получаем данные из поля ввода с помощью input_value</title>
+  <meta charset="UTF-8 />
+  
+<html>
+<body>
+
+<h1 style="font-family:verdana;"></h1>
+
+<p style="font-family:courier;"></p>
+
+
+<body>
+
+<h6>Заголовок 6</h6>
+<div>
+	<div>
+		<form  class="v_forme" > 
+		 <p class="menyaem-soobchenie"> введите электронный адрес</p>
+		 <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <div>
+            <label for="il">email</label>
+            <input type="email" class="email-vvod" placeholder="keks@flashnews.ru" value="adress@mail.ru" required id="il">
+          </div>
+
+          <button type="submit">Подписаться</button>
+        </form>
+  
+		<!-- <input  class="email" value="adress@mail.ru"> <input type="submit"> -->
+		
+		</form>
+	</div>
+
+</div>
+<script> 
+
+let message = document.querySelector('.menyaem-soobchenie');
+let form = document.querySelector('.v_forme');
+let email = document.querySelector('.email-vvod');
+
+form.onsubmit = function(evt) {
+  evt.preventDefault(); // не отправляет на сервер
+  
+ message.textContent = 'Костя ' + email.value + ' так написал.';
+ };
+</script>
+</body>
+</html>
+
+
+</body>
+</html>
