@@ -149,3 +149,72 @@ npm run dev
 запушить в репозиторий
 и восстановить папку командой:
 npm i
+19
+npm run dev
+
+
+далее 11 урок
+
+== jquery
+1. в терминале
+npm i jquery
+= в package.json появится новая строчка.
+2
+index.js 
+import $ from 'jquery';
+$('.box').html('hello');
+
+(дальше заранее пишем это из №3)
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+// Swiper свайпер (№4)
+ var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+проверяем
+создать див .box 
+3
+https://swiperjs.com/get-started оттуда копируем
+npm install swiper
+
+смотрим демо https://swiperjs.com /demo
+выбираем слева в списке infinite loop with slides per group.
+4. 
+над демо (справа) клик по Core 
+копируем только скрипт
+
+5.
+создать section
+
+1.https://webpack.js.org/loaders/source-map-loader/
+source-map-loader дополнение
+npm i -D source-map-loader
+
+webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
+    ],
+  },
+};
