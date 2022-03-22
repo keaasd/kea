@@ -1,3 +1,6 @@
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+синтаксис 
+
 GitHub, BitBucket или GitLab?  (Последние две компании предлагают неограниченные бесплатные частные репозитории). 
 
 сохранить изменения git push
@@ -9,3 +12,8 @@ GitHub, BitBucket или GitLab?  (Последние две компании п
 git remote add origin git@github.com:keaasd/fd.git
 git branch -M main
 git push -u origin main
+
+  
+  # The largest heading
+## The second largest heading
+###### The smallest heading
