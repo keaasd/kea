@@ -4,6 +4,9 @@ https://den7466.github.io/Module01-Test/portfolio/
 slidesPerScroll
 в слайдах.
 ==
+шрифты скачать локально
+https://webfonts.pro
+==
 .background-img {
   background-image: url(https://cutewallpaper.org/21/  h-.jpg);
   max-width: 800px;
