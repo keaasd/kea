@@ -965,32 +965,114 @@ window.addEventListener('keydown', e => {
 
 
 еще модалка старая 
-// попап окна
-let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
-let popup = document.querySelector('.popup'); // Само окно
-let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
-let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
+<!-- мобильное меню 1-1 модалка -->
 
-openPopupButtons.forEach((button) => { // Перебираем все кнопки
-    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
-        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
-        popupBg.classList.add('active'); // Добавляем класс 'active' для фона
-        popup.classList.add('active'); // И для самого окна
-    })
+<form action="#" class="modal block_center" >
+    <div class="modal__inner">
+        <button type="button" class="modal__close"></button>
+        <h2 class="modal__header">регистрация</h2>
+        <div class="modal__elements">
+            <div class="modal__item">
+                <input class="modal__input" type="text" placeholder="Ваше имя">
+            </div>
+            <div class="modal__item">
+                <input class="modal__input" type="email" placeholder="e-mail">
+            </div>
+            <div class="modal__item">
+                <input class="modal__input" type="tel" placeholder="номер телефона">
+            </div>
+        </div>
+        <button type="submit">Отправить</button>
+    </div>
+</form>
+<!-- мобильное меню 1-2 css -->
+.block_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: auto;
+  padding: 3rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s linear;
+}
+.modal__inner {
+    max-width: 663px;
+    width: 100%;
+    padding: 9rem 9.5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image: url(../image/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+.modal__elements {
+    margin: 0 auto;
+    max-width: 44.4rem;
+}
+.noscroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+// modal window
+const modalWindow = document.querySelector('.modal');
+const buttonModals = document.querySelectorAll('.modal__button');
+const modalClose = document.querySelector('.modal__close');
+const body = document.querySelector('body');
+
+// по клику по кнопке включаем меню  
+// убираем прокрутку с body 
+buttonModals.forEach((item) => {
+	item.addEventListener('click', () => {
+		// modalWindow.style.display = 'flex', background = `red`;
+		 
+		modalWindow.style.cssText = `	
+		visibility: visible;
+		opacity: 1;
+		`;
+		body.classList.add('noscroll');
+	});
 });
-
-closePopupButton.addEventListener('click',() => { // Вешаем обработчик на крестик
-    popupBg.classList.remove('active'); // Убираем активный класс с фона
-    popup.classList.remove('active'); // И с окна
+// закрываем модалку при нажатии вне
+// вернем прокрутку в body  
+modalWindow.addEventListener('click', (e) => {
+	const isModal = e.target.closest('.modal__inner');
+	if (!isModal) {
+	modalWindow.style.cssText = `	
+	visibility: hidden;
+	opacity: 0;
+	`;
+	body.classList.remove('noscroll');
+}
 });
-
-document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-    if(e.target === popupBg) { // Если цель клика - фот, то:
-        popupBg.classList.remove('active'); // Убираем активный класс с фона
-        popup.classList.remove('active'); // И с окна
-    }
-});
-
+// по клику на крестик включаем скрол 
+modalClose.addEventListener('click', () => {
+	modalWindow.style.cssText = `	
+	visibility: hidden;
+	opacity: 0;
+	`;
+	body.classList.remove('noscroll');
+})
 
 
 
