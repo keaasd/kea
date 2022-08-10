@@ -1,6 +1,9 @@
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 синтаксис 
 http://coddism.com/zametki/razmetka_readmemd_v_github
+имя
+$ git config --global user.name "Your name here"
+$ git config --global user.email "your_email@example.com"
 
 GitHub, BitBucket или GitLab?  (Последние две компании предлагают неограниченные бесплатные частные репозитории). 
 
