@@ -1,1 +1,43 @@
 Autoprefixer
+плагины 
+Auto Complete Tag - закрывает теги
+htmlHint - подчеркивает ошибки тега
+indent-rainbow - пробелы подчеркивает
+bem helper - если по бэму css.
+path intellisense - помогает писать пути к 
+material theme - тема оболочка
+material icon theme - иконки
+Live Server - можно не обновлять сайт
+CSS Peek - подсказка в html
+eslint - редактор на лету может проверять JavaScript код на соответствие заданным правилам. В случае ошибки редактор укажет на место, где была допущена ошибка, и расскажет, какое правило нарушено
+
+EditorConfig. 
+Beautify — форматирует текст по заданным настройкам и приводит его к единообразию.
+
+
+в терминале вводим после установки гитХап : $ git config --global user.name "Евгений Коротин"
+ All Autocomplete — подсказывает названия классов
+$ git config --global user.name "Евгений Коротин"
+$ git config --global user.email kea-asd@yandex.ru
+
+4. Prettier — форматирует код
+
+5. Wordpress Snippets 
+
+
+Полезные ссылки
+
+Advanced Custom Fields — Плагин для WordPress
+
+register_post_type — регистрация нового типа записей
+
+dashicons — иконки для админ панели
+
+get_posts — функция для вывода постов
+
+add_theme_support — добавляем картинки к записям
+
+map-constructor — конструктор Яндекс.Карт6. SFTP
+2 ДЕНаппптммммммм сссмммммвмч 
+<a href="https://yandex.ru/maps/?um=constructor%3A4dff71e87cbc4c2ffd43d05b2ef468e765ee1fc450e78ae68b51698b68a84d38&source=constructorStatic" target="_blank"></a>
+<img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A4dff71e87cbc4c2ffd43d05b2ef468e765ee1fc450e78ae68b51698b68a84d38&width=360&height=240&lang=ru_RU" alt="" style="border: 0;>
