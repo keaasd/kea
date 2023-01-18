@@ -21,3 +21,9 @@ git push -u origin main
   # The largest heading
 ## The second largest heading
 ###### The smallest heading
+
+  
+  команды 
+git log --oneline лог коммитов
+  git cat-file -p hash - покажет содержание коммита ( -р в человеческом виде)
+  git cat-file -p (14d0040 это хеш)
