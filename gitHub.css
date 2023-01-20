@@ -1,24 +1,31 @@
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 синтаксис 
+=
 http://coddism.com/zametki/razmetka_readmemd_v_github
 имя
+=
 https://github.com/cyberspacedk/Git-commands
 Шпаргалка 
 
 https://www.youtube.com/watch?v=1upalKiDeEI
 видео взаимодействие, гитпул форк совместная разработка
 ==
+имя
 $ git config --global user.name "Your name here"
 $ git config --global user.email "your_email@example.com"
-
+  команды на каждый день
 git checkout -b new-branch 5589877   # создать ветку new-branch, начинающуюся с коммита c хешем 5589877 (переместить HEAD на указанный коммит, рабочую директорию вернуть к состоянию, на момент этого коммита, создать указатель на этот коммит (ветку) с указанным именем)
+git push origin feature #Загружает изменения в текущей ветви в origin в ветвь feature
 
-GitHub, BitBucket или GitLab?  (Последние две компании предлагают неограниченные бесплатные частные репозитории). 
-  # The largest heading
-## The second largest heading
-###### The smallest heading
+  Когда ваш pull request примут, не забудьте слить изменения в свой репозиторий (или удалить его, если больше не нужен):
+git checkout master # переходим в мастер
+git pull upstream master # забираем
+git push origin master
+  Так же можно удалить ветку, в которой велась разработка:
+git branch -d feature           # В локальном репозитории
+git push origin :feature        # В удалённом репозитории
 
-  
+ 
   команды 
 git log --oneline лог коммитов
   git cat-file -p hash - покажет содержание коммита ( -р в человеческом виде)
@@ -121,3 +128,9 @@ git merge fix                  # вливаем изменения из fix в m
 # видим проблему: часть функциональности сломалась
 git checkout fix               # переключаемся на fix (пока мы в master, git не даст ее двигать)
 git branch -f master ORIG_HEAD # передвигаем ветку master на коммит, указанный в ORIG_HEAD (тот, на который указывала master до вливания fix)
+
+
+GitHub, BitBucket или GitLab?  (Последние две компании предлагают неограниченные бесплатные частные репозитории). 
+  # The largest heading
+## The second largest heading
+###### The smallest heading
