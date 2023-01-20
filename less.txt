@@ -1,0 +1,335 @@
+color: lighten(red, 50%); // светлее red на 50%
+color: darken(blue, 25%); // темнее blue на 25%
+color: saturate(green, 20%); // green насыщеннее на 20%
+color: desaturate(blue, 50%); // blue бледнее на 50%
+color: spin(red, 90); // цвет повернЄтс€ от красного на 90∞ по часовой
+border-color: spin(#f0f, -45); // цвет на 45∞ от #f0f против часовой
+=
+еще раз это же сокращенно
+@base-color: rgb(110, 27, 255);
+@error-color: spin(@base-color, 60);
+@info-color: spin(@base-color, -60);
+@warning-color: spin(@base-color, 120);
+@success-color: spin(@base-color, -120);
+
+.generate-colors(@color) {
+  @bg-color: lighten(@color, 35%);
+  color: darken(@bg-color, 50%);
+  background-color: @bg-color;
+  border-color: darken(spin(@bg-color, -10), 5%);
+}
+замен€ем на другой цвет
+.alert {
+  &-primary {
+    .generate-colors(@base-color);
+  }
+
+  &-error {
+    .generate-colors(@error-color);
+  }
+
+  &-info {
+     .generate-colors(@info-color );
+  }
+
+  &-warning {
+     .generate-colors(@warning-color );
+  }
+
+  &-success {
+     .generate-colors(@success-color );
+  }
+}
+==
+
+
+
+=
+@base-color: rgb(110, 27, 255);
+
+@distance: 60;
+@error-color: spin(@base-color, @distance);
+@info-color: spin(@base-color, @distance * -1);
+@warn-color: spin(@base-color, @distance * 2);
+@success-color: spin(@base-color, @distance * -2);
+
+==
+ховер
+.btn {
+  &-hover,
+  &:hover {
+    color: red;
+  }
+} 
+
+==
+rgb(10, 10, 10) + 10
+=
+примеси
+
+.margin(@value) {
+  margin-top: @value;
+  margin-bottom: @value;
+}
+
+.block {
+  .margin(10px);
+}
+
+=
+.paint(@color) {
+  background-color: @color;
+}
+.monster-foolish {
+	.paint(@red)}
+
+.monster-friendly {
+	.paint(@blue)}
+=
+«начение параметра примеси по†умолчанию
+.big(@size: 100500px) {
+  width: @size;
+}
+
+.block {
+  .big(10px);
+} 
+.block {
+  .big(); - по умолчанию @size: 100500px
+}
+==
+ѕримесь с†несколькими параметрами
+.offset(@padding; @margin) {
+  padding: @padding;
+  margin: @margin;
+}
+
+.block {
+  .offset(5px; 10px);
+}
+
+===
+Ўаблоны примесей
+.set-font-size(smaller; @size) {
+  font-size: @size / 2;
+}
+.text {
+  .set-font-size(100px);
+}
+
+.small-text {
+  .set-font-size(smaller; 100px);
+}
+==
+
+универсальный шаблон
+.font-size(smaller; @size) {
+  font-size: @size / 2;
+}
+.font-size(smaller; @size) {
+  font-size: @size / 2;
+}
+
+.font-size(@_; @size) {
+  color: #000000;
+} // универсальный шаблон
+==
+ѕримесь с†условием
+.mixin(@variable) when (@variable = 1) {
+  // сделать что-то
+}
+.some-class {
+  .mixin(1);
+}
+
+.mixin(@color) when (lightness(@color) > 50%) {
+  // сделать что-то, когда цвет светлее серого
+}
+
+.mixin(@color) when (lightness(@color) = 100%) {
+  // сделать что-то, когда цвет полностью белый
+}
+=
+.set-color(@color) when (lightness(@color) >= 50%) {
+  background-color: black;
+}
+если цвет светлее или темнее
+.set-color(@color) when (lightness(@color) < 50%) {
+  background-color: white;
+}
+==
+”слови€ и†внешние переменные
+.text-color() when (@theme = light) {
+  color: white;
+}
+“о†условие выполнитс€, созданна€ примесь отработает:
+@theme: light;
+
+.content {
+  .text-color();
+}
+=
+@type: bad;
+
+.paint() when (@type = good) {
+background-color: #7fdbff;
+}
+==
+
+”слови€ и†типы параметров
+// проверка: значение Ч цвет
+.mixin(@param) when (iscolor(@param)) { Е }
+
+// проверка: значение Ч число
+.mixin(@param) when (isnumber(@param)) { Е }
+
+// проверка: значение Ч строка
+.mixin(@param) when (isstring(@param)) { Е }
+
+// проверка: значение Ч ключевое слово
+.mixin(@param) when (iskeyword(@param)) { Е }
+
+// проверка: значение Ч url
+.mixin(@param) when (isurl(@param)) { Е }
+
+=
+ѕеременные-вставки
+„тобы сделать подстановку значени€ переменной, нужно использовать фигурные скобки вокруг еЄ†имени:
+@property: color;
+.btn-error {
+  background-@{property}: red;
+}
+=
+ стати, тильда ~ в†примере выше нужна дл€ хитрого механизма экранировани€ Less. Ѕез неЄ Ђсклеиваниеї переменной и†единицы измерени€ не†сработает.
+@pixels: 2;
+.btn-info {
+  border: ~"@{pixels}px" solid blue;
+}
+
+÷икл
+ цикл исполн€етс€ три раза, в†каждой итерации создастс€ правило с†переменной-счЄтчиком @n в†качестве суффикса селектора:
+.mixin(@n) when (@n > 0) {
+  .text-@{n} {
+  }
+
+  .mixin(@n - 1);
+}
+
+.mixin(3);
+
+в css так будет = text-3 text-2 text-1.
+==
+@red: #ff4136;
+если @n = 3, условие 3 больше нул€, то три разных класса создаст. и цвета разные будут через spin
+.generate-colors(@n) when (@n > 0) {
+  .monster-@{n} {
+    background-color: spin(@red, @n * 100);
+  }
+
+  .generate-colors(@n - 1);
+}
+
+.generate-colors(3);
+
+==
+
+шрифт и рассто€ние между
+@line: 16px;
+
+.set-font(@font-size, @line-height: @line) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.set-margin(@margin-top: @line, @margin-bottom: @line) {
+  margin-top: @margin-top;
+  margin-bottom: @margin-bottom;
+}
+.set-font("@font-size, @line-height: @line;)
+=
+li {
+  .set-font(@line * 0.8); меньше чем основной текст
+  .set-margin((@line / 2), (@line / 2));
+}
+==
+выравниваем блок (об€зательно ширина выставлена и высота)
+
+.zero-centered() {
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.centered-box {
+  width: 100px;
+  height: 100px;
+  .zero-centered();
+}
+
+
+=== треугольник вверх.
+.triangle(@_; @size; @color) {
+  width: 0;
+  height: 0;
+  border-width: @size;
+  border-style: solid;
+  border-color: @color;
+}
+
+.triangle-box {
+  .zero-centered;
+  .triangle(top; 100px; #ff4136);
+}
+
+.triangle(top; @size; @color) {
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-style: none;
+}
+=
+
+.triangle(@_; @size; @color) {
+  width: 0;
+  height: 0;
+  border-width: @size;
+  border-style: solid;
+  border-color: @color;
+}
+
+.triangle(top; @size; @color) {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-style: none;
+}
+
+.triangle(right; @size; @color) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
+
+}
+
+.triangle(bottom; @size; @color) {
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-style: none;
+}
+
+.triangle(left; @size; @color) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-style: none;
+}
+
+.triangle-box-top {
+  .triangle(top; 50px; #ff4136);
+}
+
+.triangle-box-right {
+  .triangle(right; 50px; #0074d9);
+}
+==
